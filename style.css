@@ -1,6 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  /* Apply Fonts */
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+
+}
+
 :root {
-    --liner-bg: linear-gradient(to bottom, #2A7D6C, #3E6960);
-    --slider-desc-bg: #194D44;
-    --button-bg: #5BC8AF;
-  }
-  
+  --primary: #297c6b;
+  --primary-light: #5bc8af;
+  --primary-dark: #194d44;
+  --primary-bold: #333;
+  --muted: #eaeaea;
+  --white: #ffffff;
+
+  --linear-bg: linear-gradient(
+    to bottom,
+    hsla(167, 50%, 33%, 1),
+    hsla(167, 26%, 33%, 0.62)
+  );
+}
