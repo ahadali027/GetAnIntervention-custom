@@ -15,6 +15,7 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--primary);
 }
 
 :root {
@@ -34,4 +35,52 @@ body {
   --max-widht-pc: 1440px;
   --max-widht-tablet: 768px;
   --max-widht-mobile: 360px;
+}
+
+/* inputs  */
+
+.form {
+  background-color: white;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 2px;
+}
+
+.input-group {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.input {
+  padding: 10px;
+  width: 200px;
+  height: 48px;
+  max-width: 300px;
+  outline: none;
+  background-color: #297c6b;
+}
+
+.placeholder {
+  position: absolute;
+  top: 10px;
+  outline: none;
+  left: 11px;
+  font-size: 16px;
+  padding: 0 5px;
+  background-color: #297c6b;
+  transition: 0.3s ease;
+  color: white;
+  font-family: "Montserrat", serif;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus + .placeholder {
+  top: -11px;
+  border: none;
+  color: white;
 }
