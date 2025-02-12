@@ -15,6 +15,7 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--primary-bold); /* Remove Background */
 }
 
 :root {
@@ -36,20 +37,129 @@ body {
   --max-widht-mobile: 360px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* Navbar CSS */
+
+.navbar {
+  position: relative;
+  max-width: 1440px;
+  padding-inline: 128px;
+  margin: auto;
+  padding-block: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+
+  & .navbar-logo {
+    width: 226px;
+    height: 35px;
+  }
+
+  & nav {
+    display: flex;
+    gap: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    gap: 30px;
+    line-height: 41px;
+
+    & p {
+      font-weight: 700;
+      color: var(--white);
+      word-spacing: 3px;
+
+      & span {
+        color: var(--primary-light);
+      }
+    }
+
+    & ul {
+      display: flex;
+      font-weight: 400;
+      gap: 30px;
+      & .nav-item-active {
+        font-weight: 700;
+        text-decoration: underline;
+        color: var(--white);
+      }
+    }
+  }
+
+  .navbar-toggle {
+    background: none;
+    display: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    img {
+      width: 20px;
+      height: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .navbar {
+    padding-inline: 24px;
+  }
+  .navbar span.bar {
+    display: none;
+  }
+  .navbar nav {
+    flex-direction: column;
+    align-items: end;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    background-color: var(--primary);
+    .navbar-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .navbar.expand nav {
+    display: flex;
+    position: absolute;
+    align-items: start;
+    padding: 0 24px;
+    left: 0;
+    width: 100%;
+    top: 100%;
+
+    background-color: var(--primary);
+
+    ul {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+/* Navbar CSS End */
 /* Hero Section */
 .hero-container {
   position: relative;
   width: 100%;
 }
-.hero-image{
-    width: 100%;
-    /* height: 100vh; */
-    background-position:center;
-    background-size: cover;
-    
+.hero-image {
+  width: 100%;
+  /* height: 100vh; */
+  background-position: center;
+  background-size: cover;
 }
 .hero {
- 
   position: absolute;
   top: 0;
 
@@ -58,7 +168,6 @@ body {
   align-items: center;
   /* padding: 50px; */
   margin-top: 70px;
-
 }
 
 .hero-content {
@@ -80,7 +189,6 @@ body {
   margin-top: 10px;
   color: white;
 }
-
 
 .contact-form {
   background: var(--linear-bg);
@@ -114,7 +222,6 @@ form select {
   border-radius: 5px;
 }
 
-
 button {
   width: 100%;
   padding: 12px;
@@ -127,9 +234,7 @@ button {
   color: white;
 }
 
-
 @media (max-width: 1210px) {
-
   .hero {
     flex-direction: column;
     text-align: center;
@@ -142,13 +247,12 @@ button {
   .contact-form {
     width: 700px;
   }
-  .hero-image{
-    height: 100vh;  
-}
+  .hero-image {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 768px) {
-
   .hero {
     flex-direction: column;
     padding: 30px;
@@ -160,9 +264,9 @@ button {
   .contact-form {
     width: 100%;
   }
-  .hero-image{
-    height: 130vh;  
-}
+  .hero-image {
+    height: 130vh;
+  }
 }
 .custom-shape-divider-bottom-1739391314 {
   position: absolute;
