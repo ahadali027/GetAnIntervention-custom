@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .tooltip for cards */
+      .tooltip {
+        width: 300px;
+        height: 84px;
+        border-radius: 12px; /* Rounded top & bottom corners */
+        background-color: rgba(41, 124, 107, 1);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+
+      .tooltip::before {
+        content: "";
+        position: absolute;
+        top: -8px; /* Adjust based on border-radius */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 22px;
+        height: 9px;
+        background-color: rgba(41, 124, 107, 1);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border: none;
+      }
+
+      .content {
+        max-width: 268px;
+        height: 68px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      /* tooltip for input  */
+
+      .tooltip-input {
+        width: 200px;
+        height: 64px;
+        border-radius: 8px; /* Rounded top & bottom corners */
+        background-color: rgba(255, 119, 119, 1);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin-top: 20px;
+      }
+
+      .tooltip-input::before {
+        content: "";
+        position: absolute;
+        top: -8px; /* Adjust based on border-radius */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 22px;
+        height: 9px;
+        background-color: rgba(255, 119, 119, 1);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border: none;
+      }
+
+      .content-input {
+        max-width: 168px;
+        height: 40px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 13px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- tooltip for cards  -->
+    <div class="tooltip">
+      <p class="content">
+        We’re experienced in our individual crafts and understand how each one
+        of our roles impacts your plan holistically.
+      </p>
+    </div>
+
+    <!-- tooltip for input  -->
+
+    <div class="tooltip-input">
+      <p class="content-input">This field can’t be empty. Please fill it in.</p>
+    </div>
+  </body>
+</html>
