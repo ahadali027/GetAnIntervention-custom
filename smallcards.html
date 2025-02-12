@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-container {
+        position: relative;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .container {
+        border: 2px solid rgba(91, 200, 175, 1);
+        max-width: 371px;
+        height: 96px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        line-height: 28px;
+        transition: 0.2s ease;
+      }
+      .container img {
+        height: 24px;
+        width: 24px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .container:hover img {
+        opacity: 1;
+      }
+      .container:hover {
+        color: rgba(91, 200, 175, 1);
+      }
+
+      /* .tooltip for cards */
+      .tooltip {
+        width: 300px;
+        height: 84px;
+        border-radius: 12px; /* Rounded top & bottom corners */
+        background-color: rgba(41, 124, 107, 1);
+        position: absolute;
+        bottom: -93px;
+        left: 35.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        opacity: 0;
+        transition: 0.2s;
+        pointer-events: none;
+      }
+
+      .tooltip::before {
+        content: "";
+        position: absolute;
+        top: -8px; /* Adjust based on border-radius */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 22px;
+        height: 9px;
+        background-color: rgba(41, 124, 107, 1);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border: none;
+      }
+
+      .content {
+        max-width: 268px;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 1);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .container:hover .tooltip {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="container">
+        Insurance Advocacy <img src="./cardimage//image.png" alt="" />
+        <div class="tooltip">
+          <p class="content">
+            We’re experienced in our individual crafts and understand how each
+            one of our roles impacts your plan holistically.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
